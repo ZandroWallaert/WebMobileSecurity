@@ -5,6 +5,7 @@ function init() {
 }
 
 function showMovies(q) {
+    document.querySelector("div").innerHTML = "";
     fetch("http://www.omdbapi.com/?s=" + q + "&apikey=c86a5567")
         .then(function (response) {
             return response.json();
